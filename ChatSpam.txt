@@ -1,0 +1,304 @@
+
+document.addEventListener('keyup', (e)=>{
+if (e.keyCode == 38 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+			if (ChatSpam) {
+            ChatSpam1 = setTimeout(function(){ ChatSpamFC1(); }, 1);
+			} else {
+            clearTimeout(ChatSpam1);
+            clearTimeout(ChatSpam2);
+            clearTimeout(ChatSpam3);
+            clearTimeout(ChatSpam4);
+            clearTimeout(ChatSpam5);
+            clearTimeout(ChatSpam6);
+            clearTimeout(ChatSpam7);
+            clearTimeout(ChatSpam8);
+            clearTimeout(ChatSpam9);
+            clearTimeout(ChatSpam10);
+            clearTimeout(ChatSpam11);
+            clearTimeout(ChatSpam12);
+            clearTimeout(ChatSpam13);
+            clearTimeout(ChatSpam14);
+            clearTimeout(ChatSpam15);
+            clearTimeout(ChatSpam16);
+            clearTimeout(ChatSpam17);
+            clearTimeout(ChatSpam18);
+            clearTimeout(ChatSpam19);
+            clearTimeout(ChatSpam20);
+                clearTimeout(ChatSpam21);
+                clearTimeout(ChatSpam22);
+                clearTimeout(ChatSpam23);
+                clearTimeout(ChatSpam24);
+                clearTimeout(ChatSpam25);
+                clearTimeout(ChatSpam26);
+                clearTimeout(ChatSpam27);
+                clearTimeout(ChatSpam28);
+                clearTimeout(ChatSpam29);
+                clearTimeout(ChatSpam30);
+                clearTimeout(ChatSpam31);
+                clearTimeout(ChatSpam32);
+                clearTimeout(ChatSpam33);
+                clearTimeout(ChatSpam34);
+                clearTimeout(ChatSpam35);
+                clearTimeout(ChatSpam36);
+                clearTimeout(ChatSpam37);
+                clearTimeout(ChatSpam38);
+                clearTimeout(ChatSpam39);
+                clearTimeout(ChatSpam40);
+                clearTimeout(ChatSpam41);
+                clearTimeout(ChatSpam42);
+			}
+			ChatSpam = !ChatSpam;
+		}
+})
+var ChatSpam1;
+var ChatSpam2;
+var ChatSpam3;
+var ChatSpam4;
+var ChatSpam5;
+var ChatSpam6;
+var ChatSpam7;
+var ChatSpam8;
+var ChatSpam9;
+var ChatSpam10;
+var ChatSpam11;
+var ChatSpam12;
+var ChatSpam13;
+var ChatSpam14;
+var ChatSpam15;
+var ChatSpam16;
+var ChatSpam17;
+var ChatSpam18;
+var ChatSpam19;
+var ChatSpam20;
+var ChatSpam21;
+var ChatSpam22;
+var ChatSpam23;
+var ChatSpam24;
+var ChatSpam25;
+var ChatSpam26;
+var ChatSpam27;
+var ChatSpam28;
+var ChatSpam29;
+var ChatSpam30;
+var ChatSpam31;
+var ChatSpam32;
+var ChatSpam33;
+var ChatSpam34;
+var ChatSpam35;
+var ChatSpam36;
+var ChatSpam37;
+var ChatSpam38;
+var ChatSpam39;
+var ChatSpam40;
+var ChatSpam41;
+var ChatSpam42;
+var ChatSpam = true;
+function ChatSpamFC1() {
+doNewSend(["ch", ["I'm ready to go"]]);
+clearTimeout(ChatSpam1);
+ChatSpam1 = setTimeout(function(){ ChatSpamFC2(); }, 1000);
+}
+function ChatSpamFC2() {
+doNewSend(["ch", ["cause I'm burning for you"]]);
+clearTimeout(ChatSpam2);
+ChatSpam3 = setTimeout(function(){ ChatSpamFC3(); }, 1000);
+}
+function ChatSpamFC3() {
+doNewSend(["ch", ["Got this power"]]);
+clearTimeout(ChatSpam3);
+ChatSpam4 = setTimeout(function(){ ChatSpamFC4(); }, 1000);
+}
+function ChatSpamFC4() {
+doNewSend(["ch", ["that is taking me out"]]);
+clearTimeout(ChatSpam4);
+ChatSpam5 = setTimeout(function(){ ChatSpamFC5(); }, 1000);
+}
+function ChatSpamFC5() {
+doNewSend(["ch", ["Yes, I've got a crush on you"]]);
+clearTimeout(ChatSpam5);
+ChatSpam6 = setTimeout(function(){ ChatSpamFC6(); }, 1000);
+}
+function ChatSpamFC6() {
+doNewSend(["ch", ["ready, now, ready, go"]]);
+clearTimeout(ChatSpam6);
+ChatSpam7 = setTimeout(function(){ ChatSpamFC7(); }, 1000);
+}
+function ChatSpamFC7() {
+doNewSend(["ch", ["Gonna take my car"]]);
+clearTimeout(ChatSpam7);
+ChatSpam8 = setTimeout(function(){ ChatSpamFC8(); }, 1000);
+}
+function ChatSpamFC8() {
+doNewSend(["ch", ["Gonna sit in"]]);
+clearTimeout(ChatSpam8);
+ChatSpam9 = setTimeout(function(){ ChatSpamFC9(); }, 1000);
+}
+function ChatSpamFC9() {
+doNewSend(["ch", ["Gona drive along til I get you"]]);
+clearTimeout(ChatSpam9);
+ChatSpam10 = setTimeout(function(){ ChatSpamFC10(); }, 1000);
+}
+function ChatSpamFC10() {
+doNewSend(["ch", ["Cause I'm crazy, hot and ready"]]);
+clearTimeout(ChatSpam10);
+ChatSpam11 = setTimeout(function(){ ChatSpamFC11(); }, 1000);
+}
+function ChatSpamFC11() {
+doNewSend(["ch", ["but you like it"]]);
+clearTimeout(ChatSpam11);
+ChatSpam12 = setTimeout(function(){ ChatSpamFC12(); }, 1000);
+}
+function ChatSpamFC12() {
+doNewSend(["ch", ["I wanna race for you"]]);
+clearTimeout(ChatSpam12);
+ChatSpam13 = setTimeout(function(){ ChatSpamFC13(); }, 1000);
+}
+function ChatSpamFC13() {
+    doNewSend(["ch", ["(Shall I go now?)"]]);
+clearTimeout(ChatSpam13);
+ChatSpam14 = setTimeout(function(){ ChatSpamFC14(); }, 1000);
+}
+function ChatSpamFC14() {
+doNewSend(["ch", ["Gas Gas Gas!"]]);
+clearTimeout(ChatSpam14);
+ChatSpam15 = setTimeout(function(){ ChatSpamFC15(); }, 1000);
+}
+function ChatSpamFC15() {
+doNewSend(["ch", ["I'm gonna step in the gas"]]);
+clearTimeout(ChatSpam15);
+ChatSpam16 = setTimeout(function(){ ChatSpamFC16(); }, 1000);
+}
+function ChatSpamFC16() {
+doNewSend(["ch", ["Tonight, I'II fly"]]);
+clearTimeout(ChatSpam16);
+ChatSpam17 = setTimeout(function(){ ChatSpamFC17(); }, 1000);
+}
+function ChatSpamFC17() {
+doNewSend(["ch", ["(and be your lover)"]]);
+clearTimeout(ChatSpam17);
+ChatSpam18 = setTimeout(function(){ ChatSpamFC18(); }, 1000);
+}
+function ChatSpamFC18() {
+doNewSend(["ch", ["Yeah, yeah, yeah"]]);
+clearTimeout(ChatSpam18);
+ChatSpam19 = setTimeout(function(){ ChatSpamFC19(); }, 1000);
+}
+function ChatSpamFC19() {
+doNewSend(["ch", ["I'II  be so quick as a flash"]]);
+clearTimeout(ChatSpam19);
+ChatSpam20 = setTimeout(function(){ ChatSpamFC20(); }, 1000);
+}
+function ChatSpamFC20() {
+doNewSend(["ch", ["And I'II be your hero"]]);
+clearTimeout(ChatSpam20);
+ChatSpam21 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC21() {
+doNewSend(["ch", ["Gas Gas Gas!"]]);
+clearTimeout(ChatSpam21);
+ChatSpam22 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC22() {
+doNewSend(["ch", ["I'm gonna run as a flash"]]);
+clearTimeout(ChatSpam22);
+ChatSpam23 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC23() {
+doNewSend(["ch", ["Tonight, I'II fight"]]);
+clearTimeout(ChatSpam23);
+ChatSpam24 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC24() {
+doNewSend(["ch", ["(to be the winner)"]]);
+clearTimeout(ChatSpam24);
+ChatSpam25 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC25() {
+doNewSend(["ch", ["Yeah, yeah, yeah"]]);
+clearTimeout(ChatSpam25);
+ChatSpam26 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC26() {
+doNewSend(["ch", ["I'm gonna step in the gas"]]);
+clearTimeout(ChatSpam26);
+ChatSpam27 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC27() {
+doNewSend(["ch", ["And you'll see the big show"]]);
+clearTimeout(ChatSpam27);
+ChatSpam28 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC28() {
+doNewSend(["ch", ["Guess your're ready"]]);
+clearTimeout(ChatSpam28);
+ChatSpam29 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC29() {
+doNewSend(["ch", ["cause I'm waiting for you"]]);
+clearTimeout(ChatSpam29);
+ChatSpam30 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC30() {
+doNewSend(["ch", ["It's gonna be so  exciting"]]);
+clearTimeout(ChatSpam30);
+ChatSpam31 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC31() {
+doNewSend(["ch", ["Got this feeling"]]);
+clearTimeout(ChatSpam31);
+ChatSpam32 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC32() {
+doNewSend(["ch", ["really deep in my soul"]]);
+clearTimeout(ChatSpam32);
+ChatSpam33 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC33() {
+doNewSend(["ch", ["Let's get out, I wanna go"]]);
+clearTimeout(ChatSpam33);
+ChatSpam34 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC34() {
+doNewSend(["ch", ["come along, get it on"]]);
+clearTimeout(ChatSpam34);
+ChatSpam35 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC35() {
+doNewSend(["ch", ["Gonna take my caaaaaaaaaaaah"]]);
+clearTimeout(ChatSpam35);
+ChatSpam36 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC36() {
+doNewSend(["ch", ["Do you like my  c a r?"]]);
+clearTimeout(ChatSpam36);
+ChatSpam37 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC37() {
+doNewSend(["ch", ["Cause I'm crazy, hot and ready"]]);
+clearTimeout(ChatSpam37);
+ChatSpam38 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC38() {
+doNewSend(["ch", ["but you like it"]]);
+clearTimeout(ChatSpam38);
+ChatSpam39 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC39() {
+doNewSend(["ch", ["I wanna race for you"]]);
+clearTimeout(ChatSpam39);
+ChatSpam40 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC40() {
+doNewSend(["ch", ["Yeah, yeah, yeah"]]);
+clearTimeout(ChatSpam40);
+ChatSpam41 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+function ChatSpamFC41() {
+doNewSend(["ch", ["You ready?"]]);
+clearTimeout(ChatSpam41);
+ChatSpam42 = setTimeout(function(){ ChatSpamFC1(); }, 1000);
+}
+
+function isElementVisible(e) {
+    return (e.offsetParent !== null);
+}

@@ -1,0 +1,2135 @@
+// ==UserScript==
+// @name         !PRӨJΣCT PHӨΣПIX
+// @namespace    -
+// @version      v0.9
+// @description  just mod and ae86 suck and are trash.
+// @author       NoT BoT (Leaked by BurningPancakes_YT) Sharing soon, just private for now...
+// @match        *.moomoo.io/*
+// @match        http://moomooreborn.io
+// @require https://code.jquery.com/jquery-3.3.1.min.js
+// @require      https://cdn.jsdelivr.net/npm/msgpack-lite@0.1.26/dist/msgpack.min.js
+// @require      https://cdn.jsdelivr.net/npm/fontfaceobserver@2.1.0/fontfaceobserver.standalone.min.js
+// @grant        none
+// @require https://greasyfork.org/scripts/368273-msgpack/code/msgpack.js?version=598723
+// @downloadURL none
+// ==/UserScript==
+//function startinglol() {
+let primTimer = 0;
+let primTimeid;
+
+function freezeRad(angle) {
+    return angle * 1745329251;
+}
+let gagagsadasd = 0;
+let makeingInsta = 0;
+let sykaOdenSapky = 0;
+let time;
+setInterval(() => {
+    //console.log("Wpr: " + Wpr + ", Apr: " + Apr + ", Spr: " + Spr + ", Dpr: " + Dpr + " Raddar: " + Math.round(Math.sqrt(Math.pow(teorX - NTeorX, 2) + Math.pow(teorY - NTeorY, 2))))//teorX
+    if (sec == 1 && TrapDirOn == 0 && (secondary == 15 || secondary == 13)) {
+        if (timer == 50) {
+            hat(20);
+        }
+        else if (timer == 1550) {
+            hat(hatttt);
+            Send(['ch', ['Reload end!']]);
+            Send(["5", [primary, true]]);
+            prim = 1;
+            sec = 0;
+        }
+        timer = timer + 50;
+    }
+    //if ((sec == 0 && (primary == 4)) || secondary == 10) {
+        primTimer = primTimer + 50;
+        if (MousePress == 1 || TrapDirOn == 1) {
+            //if (primTimer == 50) {
+            //        hat(hatttt);
+            //    acc(accessoryyy);
+            //    if(tankOn == 0 || TrapDirOn == 1){
+            //    hat(11);
+            //    acc(21);
+            //    }
+            //}
+            if (primary == 7 && sec == 0 && prim == 1 && sec == 0 && primTimer == 100) {
+                    if (TrapDirOn == 0 && tankOn == 0) {
+                    hat(7);
+                    acc(18);
+                }
+                else {
+                    hat(40);
+                }
+            } else if (secondary == 10 && primTimer == 350 && sec == 1 && prim == 0) {
+                sykaOdenSapky = 1;
+                if (TrapDirOn == 0 && tankOn == 0) {
+                    hat(7);
+                    acc(18);
+                }
+                else {
+                    hat(40);
+                }
+            } else if (primTimer == 200) {
+                sykaOdenSapky = 1;
+                if (TrapDirOn == 0 && tankOn == 0) {
+                    hat(7);
+                    acc(18);
+                }
+                else {
+                    hat(40);
+                }
+            }
+        }
+    }, 50)
+setInterval(() => {
+    if (secondary == 10 && primary == 7 && TrapDirOn == 0 && MousePress == 0 && tankOn == 1) {
+        prim = 1; sec = 0;
+                Send(["5", [primary, true]]);
+    }
+    if (secondary == 10 && primary == 7 && TrapDirOn == 0 && MousePress == 1 && tankOn == 1) {
+        prim = 0; sec = 1;
+                Send(["5", [secondary, true]]);
+    }
+    if (TrapDirOn == 1) {
+        if (secondary == 10) {
+            Send(["5", [secondary, true]]);
+        }
+        else {
+            Send(["5", [primary, true]]);
+        }
+        kakaka = 0;
+        Send(["2", [TrapDir]]);
+    }
+    if (autoaim == null && tankOn == 1 && MousePress == 1) {
+        Send(["2", [Number.MAX_VALUE]]);
+    }
+    if (autoaim == true) {
+        Send(["2", [nearestEnemyAngle]]);
+    }
+    if (kakaka == 1) {
+        Send(["2", [(Math.atan2(mouseY - height / 2, mouseX - width / 2)) + toRad(36000000000000) - toRad(10)]]);
+    }
+    if (kakaka == 2) {
+        Send(["2", [Number.MAX_VALUE]]);
+    }
+}, 0);
+
+function Send(sender) {
+    ws.send(new Uint8Array(Array.from(msgpack5.encode(sender))));
+}
+
+function aim(x, y) {
+    var cvs = document.getElementById("gameCanvas");
+    cvs.dispatchEvent(new MouseEvent("mousemove", {
+        clientX: x,
+        clientY: y
+    }));
+}
+let antiClown;
+let WASDpr = 0;
+let Wpr = 0;
+let Apr = 0;
+let Spr = 0;
+let Dpr = 0;
+setInterval(() => {
+    if (Wpr == 1 || Apr == 1 || Spr == 1 || Dpr == 1) {
+        WASDpr = 1;
+    }
+    else {
+        WASDpr = 0;
+    }
+}, 0)
+let wait = 0;
+let Qpr = 0;
+let timer = 0;
+let timerStop;
+let tipoSaver;
+let mouseX;
+let mouseY;
+let cordys;
+let Inviz = true;
+let width;
+let height;
+let BuBul = 1;
+let kakaka = 0;
+let automill = 0;
+let sec = 0;
+let prim = 1;
+let antitrap = true;
+let save = 1;
+let hatttt;
+let weaponnn;
+let accessoryyy;
+let hattt;
+let weaponn;
+let hatt;
+let accessoryy;
+let coreURL = new URL(window.location.href);
+window.sessionStorage.force = coreURL.searchParams.get("fc");
+let nearestEnemy;
+let nearestEnemyAngle;
+let isEnemyNear;
+let instaSpeed = 230;
+let primary;
+let secondary;
+let foodType;
+let wallType;
+let spikeType;
+let millType;
+let mineType;
+let boostType;
+let turretType;
+let spawnpadType;
+let autoaim = null;
+let enemiesNear;
+let ws;
+let msgpack5 = msgpack;
+let boostDir;
+let myPlayer = {
+    id: null,
+    x: null,
+    y: null,
+    dir: null,
+    object: null,
+    weapon: null,
+    clan: null,
+    isLeader: null,
+    hat: null,
+    accessory: null,
+    isSkull: null
+};
+let millplased = 0;
+let nearId;
+let cordX;
+let cordY;
+let AutoBan = 0;
+let plaseCord;
+let plase = 1;
+let pesseD;
+let canHit = 1;
+let canTrashHit;
+let hyita;
+let healToggle = 1;
+let hatToggle = 1;
+let ChatToggle = 1;
+let KEK;
+let dirr;
+let content;
+let BlaBlaSpam = 0;
+let TrapSid;
+let TrapDir;
+let TrapX;
+let TrapY;
+let TrapDirOn = 0;
+let QSaver;
+let nearEnemyAngle;
+let playerInfo;
+let clownHeal;
+document.msgpack = msgpack;
+
+function n() {
+    this.buffer = new Uint8Array([0]);
+    this.buffer.__proto__ = new Uint8Array;
+    this.type = 0;
+}
+WebSocket.prototype.oldSend = WebSocket.prototype.send;
+
+    setInterval(() => {
+WebSocket.prototype.send = function(m) {
+    if (!ws) {
+        document.ws = this;
+        ws = this;
+        socketFound(this);
+    }
+    this.oldSend(m);
+};
+    },0)
+
+function socketFound(socket) {
+    socket.addEventListener('message', function(message) {
+        handleMessage(message);
+    });
+}
+let instacount = 0;
+let nearIdInsta = 0;
+let automillX = 0;
+let automillY = 0;
+let millOlPlased;
+let nearIdInstaX;
+let nearIdInstaY;
+
+function handleMessage(m) {
+    let temp = msgpack5.decode(new Uint8Array(m.data));
+    let data;
+    if (temp.length > 1) {
+        data = [temp[0], ...temp[1]];
+        if (data[1] instanceof Array) {
+            data = data;
+        }
+    }
+    else {
+        data = temp;
+    }
+    let item = data[0];
+    if (!data) {
+        return
+    };
+    if (item === "io-init") {
+        let cvs = document.getElementById("gameCanvas");
+        width = cvs.clientWidth;
+        height = cvs.clientHeight;
+        $(window).resize(function() {
+            width = cvs.clientWidth;
+            height = cvs.clientHeight;
+        });
+        cvs.addEventListener("mousemove", e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+    }
+    //if(item != "33" && item != "5" && item != "4" && item != "h" && item != "a" && item != "9"){
+    //console.log(data);
+    //}
+    if (item == "12") {
+        if (data[1] == TrapSid && TrapDirOn == 1) {
+            TrapDirOn = 0;
+            if (boostType == 31) {
+                plase(boostType, TrapDir * -1);
+                for (let i = 0; i < 25; i++) {
+                    place(boostType, TrapDir + toRad(i * 25));
+                }
+            }
+            hat(hatttt);
+            acc(accessoryyy);
+            Send(["ch", ["NBoT: Breaking - End!"]]); //NBoT: Breaking - End!
+            SpamLKM.stop();
+            SpamLKM.stop();
+            TrapDirOn = 0;
+            if (secondary == 10) {
+                plase = 1;
+                sec = 0;
+                prim = 1;
+                Send(["5", [primary, true]]);
+                setTimeout(() => {
+                    hat(hatttt);
+                    acc(accessoryyy);
+                    plase = 1;
+                    Send(["5", [primary, true]]);
+                    setTimeout(() => {
+                        hat(hatttt);
+                        acc(accessoryyy);
+                        plase = 1;
+                        Send(["5", [primary, true]]);
+                        setTimeout(() => {
+                            plase = 1;
+                        }, 100)
+                    }, 50)
+                }, 50)
+            }
+        }
+        console.log(data);
+    }
+    if (item == "1" && myPlayer.id == null) {
+        myPlayer.id = data[1];
+    }
+    if (item == "33") {
+        enemiesNear = [];
+        for (let i = 0; i < data[1].length / 13; i++) {
+            playerInfo = data[1].slice(13 * i, 13 * i + 13);
+            if (playerInfo[0] == myPlayer.id) {
+                myPlayer.x = playerInfo[1];
+                myPlayer.y = playerInfo[2];
+                myPlayer.dir = playerInfo[3];
+                myPlayer.object = playerInfo[4];
+                myPlayer.weapon = playerInfo[5];
+                myPlayer.clan = playerInfo[7];
+                myPlayer.isLeader = playerInfo[8];
+                myPlayer.hat = playerInfo[9];
+                myPlayer.accessory = playerInfo[10];
+                myPlayer.isSkull = playerInfo[11];
+            }
+            else if (playerInfo[7] != myPlayer.clan || playerInfo[7] === null) {
+                enemiesNear.push(playerInfo);
+            }
+        }
+    }
+    if (item == "18") {
+        if (instacount == 2) {
+                if (data[3] == Math.atan2(myPlayer.y - nearIdInstaY, myPlayer.x - nearIdInstaX)) {
+                    hat(6);
+                    place(foodType)
+                    place(foodType)
+                    Send(["ch", ["NBoT: Go easy on me (arr)"]]);
+                    antiClown = 1;
+                }
+        }
+        dirr = myPlayer.dir;
+        if (Math.sqrt(Math.pow((myPlayer.y - data[2]), 2) + Math.pow((myPlayer.x - data[1]), 2)) < 120) {
+            if (dirr == data[3] || myPlayer.dir == data[3]) {
+                console.log(data[1], ' ', myPlayer.x);
+                console.log(data[2], ' ', myPlayer.y);
+                console.log(data);
+                Send(['ch', ['piv ~ pav ~ pov']]);
+                timer = 0;
+            }
+        }
+    }
+    KEK = myPlayer.x + myPlayer.y;
+    isEnemyNear = false;
+    if (enemiesNear) {
+        nearestEnemy = enemiesNear.sort((a, b) => dist(a, myPlayer) - dist(b, myPlayer))[0];
+    }
+    if (nearestEnemy) {
+        nearestEnemyAngle = Math.atan2(nearestEnemy[2] - myPlayer.y, nearestEnemy[1] - myPlayer.x);
+        if (Math.sqrt(Math.pow((myPlayer.y - nearestEnemy[2]), 2) + Math.pow((myPlayer.x - nearestEnemy[1]), 2)) < 150) {
+            console.log(nearId);
+            isEnemyNear = true;
+        }
+        else {
+            isEnemyNear = false;
+        }
+        if ((Math.sqrt(Math.pow((myPlayer.y - nearestEnemy[2]), 2) + Math.pow((myPlayer.x - nearestEnemy[1]), 2)) < 250) && TrapDirOn == 0) {
+            nearId = nearestEnemy[0];
+            nearEnemyAngle = Math.atan2(nearestEnemy[2] - myPlayer.y, nearestEnemy[1] - myPlayer.x);
+        }
+        else {
+            nearId = "nothink";
+            nearEnemyAngle = "nothink";
+        }
+    }
+    if (item == "7" && data[1] != myPlayer.id) {
+        primTimeid[data[1]] = Date.now();
+    }
+    if (item == "7" && (data[1] == myPlayer.id)) {
+        console.log(primTimer);
+        primTimer = 0;
+            if (MousePress == 1 || TrapDirOn == 1) {
+                //setTimeout(() => {
+                hat(hatttt);
+                acc(accessoryyy);
+                hat(11);
+                acc(21);
+                //},20)
+    }
+    }
+    if (item == "7" && (data[1] == nearId)) {
+        //if(hatttt == 11 && accessoryyy == 21 && primTimer >= 300 && prim == 1){
+        //    let boop;
+        //    if(kakaka != 2){
+        //        boop = 1;
+        //        kakaka = 2;
+        //    }
+        //    hat(7);
+        //    acc(21);
+        //    Send(["7", [1]]);
+        //    setTimeout(() => {
+        //    Send(["7", [1]]);
+        //        if(secondary == 11){
+        //        Send(["5", [secondary, true]]);
+        //        }
+        //    },75)
+        //    setTimeout(() => {
+        //        if(boop == 1){
+        //            kakaka = 0;
+        //        }
+        //        Send(["ch", ["NBoT: Boop."]]);//"test", null, n
+        //        hat(11);
+        //        acc(21);
+        //    },150)
+        //}
+        setTimeout(() => {
+            place(foodType);
+            setTimeout(() => {
+                place(foodType);
+                setTimeout(() => {
+                    place(foodType);
+                }, 25)
+            }, 25)
+        }, 25)
+             console.log(data)
+        instacount = 1;
+    }
+    if (item == "6") {
+        for (let i = 0; i < data[1].length / 8; i += 1) {
+                    console.log(data)
+                if (data[1].slice(i * 8, (i + 1) * 8)[data[1].slice(i * 8, (i + 1) * 8).length - 2] == 10) {
+                if (data[1][7] == myPlayer.id) {
+                    if (automill == 1) {
+                        millOlPlased++
+                            automillX = data[1][1];
+                            automillY = data[1][2];
+                        //if (millOlPlased == 3) {
+                        //}
+                    }
+                }
+            }
+        }
+        for (let i = 0; i < data[1].length / 16; i += 1) {
+                if (data[1].slice(i * 16, (i + 1) * 16)[data[1].slice(i * 16, (i + 1) * 16).length - 2] == 10) {
+                if (data[1][7] == myPlayer.id) {
+                    console.log(data)
+                    if (automill == 1) {
+                        millOlPlased++
+                            automillX = data[1][1];
+                            automillY = data[1][2];
+                        //if (millOlPlased == 3) {
+                        //}
+                    }
+                }
+            }
+        }
+        for (let i = 0; i < data[1].length / 24; i += 1) {
+                if (data[1].slice(i * 24, (i + 1) * 24)[data[1].slice(i * 24, (i + 1) * 24).length - 2] == 10) {
+                if (data[1][7] == myPlayer.id) {
+                    console.log(data)
+                    if (automill == 1) {
+                        millOlPlased++
+                            automillX = data[1][1];
+                            automillY = data[1][2];
+                        //if (millOlPlased == 3) {
+                        //}
+                    }
+                }
+            }
+        }
+    }
+    if (item == "6") {
+        if (antitrap == true) {
+            for (let i = 0; i < data[1].length / 8; i += 1) {
+                if (data[1].slice(i * 8, (i + 1) * 8)[data[1].slice(i * 8, (i + 1) * 8).length - 2] == 15) {
+                    console.log("trap");
+                    if (data[1][7] != myPlayer.id) {
+                        let d = Math.sqrt(Math.pow(myPlayer.y - data[1][2], 2) + Math.pow(myPlayer.x - data[1][1], 2));
+                        if (Math.round(Math.sqrt(Math.pow(myPlayer.y - data[1][2], 2) + Math.pow(myPlayer.x - data[1][1], 2))) < 100) {
+                            TrapDirOn = 1;
+                            plase = 0;
+                            TrapSid = data[1][0];
+                            console.log(d);
+                            TrapDir = Math.atan2(data[1][2] - myPlayer.y, data[1][1] - myPlayer.x);
+                            for (let i = 0; i < 25; i++) {
+                                place(spikeType, myPlayer.dir + toRad(i * 25));
+                            }
+                            for (let i = 0; i < 25; i++) {
+                                place(millType, myPlayer.dir + toRad(i * 25));
+                            }
+                            if (isEnemyNear == true) {
+                                if (TrapDirOn == 1) {
+                                    TrapDirOn = 0;
+                                    gagagsadasd = 1;
+                                }
+                                makeInsta();
+                            }
+                            TrapX = data[1][1];
+                            TrapY = data[1][2];
+                            hat(40);
+                            if (secondary == 10) {
+                                sec = 1;
+                                prim = 0;
+                                Send(["5", [secondary, true]]);
+                            }
+                            else {
+                                sec = 0;
+                                prim = 1;
+                                Send(["5", [primary, true]]);
+                            }
+                            setTimeout(() => {
+                                Send(["ch", ["NBoT: Breaking trap..."]]);
+                            }, 600)
+                            SpamLKM.start();
+                        } else {
+                            TrapDir = "nothink";
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if (!nearestEnemy) {
+        nearestEnemyAngle = myPlayer.dir;
+    }
+    //Send(['5', ['length', !0]]);
+    //if (item == "7") {
+    //    if(data[1] == nearId && data[2] == 1){
+    //        console.log("work, yay")
+    //        if(secondary == 11){
+    //            Send(["5", [secondary, true]]);
+    //            setTimeout(() => {
+    //                Send(["5", [primary, true]]);
+    //            },200)
+    //        }
+    //    }
+    //}
+    //    if (item == "h" && data[1] == myPlayer.id) {                  //автоспике гер Крака (бу ме)
+    //        if (data[2] != 100 && data[2] > 0 && isEnemyNear == true) {
+    //            hat(53);
+    //            setTimeout(() => {
+    //                if(isEnemyNear == true){
+    //                hat(11);
+    //                    acc(21);
+    //                } else {
+    //                    hat(12);
+    //                    acc(11);
+    //                }
+    //            },100)
+    //        }
+    //    }
+    if (item == "t") {
+        concole.log(data)
+    }
+    if (item == "h" && data[1] == nearId) {
+        if ((data[2] < 50 && data[2] > 0) && timer > 1600) {
+            timer = 0;
+            hat(53);
+            Send(["2", [nearEnemyAngle]]);
+            Send(["2", [nearEnemyAngle]]);
+            Send(["2", [nearEnemyAngle]]);
+            Send(["2", [nearEnemyAngle]]);
+            Send(["c", [1, nearEnemyAngle]]);
+            Send(["c", [0, nearEnemyAngle]]);
+            Send(["5", [secondary, true]]);
+            Send(["2", [nearEnemyAngle]]);
+            Send(["2", [nearEnemyAngle]]);
+            Send(["2", [nearEnemyAngle]]);
+            setTimeout(() => {
+                acc(accessoryyy);
+                hat(hatttt);
+                Send(["5", [primary, true]]);
+            }, 150)
+        }
+    }
+    if (item == "h" && data[1] == myPlayer.id) {
+        if (data[2] != 100 && data[2] > 0) {
+            setTimeout(() => {
+                place(foodType)
+            },100)
+            setTimeout(() => {
+                place(foodType)
+            }, 50)
+            if (Qpr == 1) {
+                antiClown = 1;
+            }
+            else {
+                antiClown = 0;
+            }
+            if (isEnemyNear && BuBul == 1 && kakaka == 2 && secondary == 11) {
+                place(foodType)
+                BuBul = 0;
+                kakaka = 2;
+                pesseD = 1;
+                hat(53);
+                Send(["5", [secondary, true]]);
+                setTimeout(() => {
+                    Send(["5", [primary, true]]);
+                    acc(accessoryyy);
+                    hat(hatttt);
+                    pesseD = 0;
+                    place(foodType)
+                    place(foodType)
+                    Send(["5", [primary, true]]);
+                    Send(["5", [primary, true]]);
+                    Send(["5", [primary, true]]);
+                    Send(["5", [primary, true]]);
+                    Send(["5", [primary, true]]);
+                    Send(["5", [primary, true]]);
+                    Send(["5", [primary, true]]);
+                    BuBul = 1;
+                    kakaka = 2;
+                }, 200)
+            }
+        //if(primTimer >= 300 && prim == 1){
+        //     let boop;
+        //    if(kakaka != 2){
+        //        boop = 1;
+        //        kakaka = 2;
+        //    }
+        //    hat(7);
+        //    acc(21);
+        //    Send(["7", [1]]);
+        //    setTimeout(() => {
+        //    Send(["7", [1]]);
+        //        if(secondary == 11){
+        //        Send(["5", [secondary, true]]);
+        //        }
+        //    },75)
+        //    setTimeout(() => {
+        //        if(boop == 1){
+        //
+        //            kakaka = 0;
+        //        }
+        //        Send(["ch", ["NBoT: Boop."]]);
+        //        hat(11);
+        //        acc(21);
+        //    },150)
+        //}
+        }
+    }
+    update();
+}
+setInterval(() => {
+    if (instacount == 1) {
+        if (playerInfo[0] == nearId) {
+            if (playerInfo[9] == '7') {
+                console.log("ded")
+                instacount = 2;
+                nearIdInsta = playerInfo[0];
+                    nearIdInstaX = playerInfo[1];
+                    nearIdInstaY = playerInfo[2];
+            }
+        }
+    }
+}, 0)
+let boop = 0;
+let instacountTT = 0;
+setInterval(() => {
+    if(nearestEnemy[9] != undefined && nearestEnemy[9] == 53) {
+        if(boop == 0){
+        boop = 1;
+                hat(22);
+                setTimeout(() => {
+                    hat(6);
+                },75);
+            setTimeout(() => {
+                    boop = 0;
+                },1000);
+            }
+    }
+    if (instacountTT < 100) {
+        if (instacount == 2) {
+            if (playerInfo[0] == nearIdInsta) {
+                if (playerInfo[9] == 53) {
+                    hat(6);
+                    place(foodType)
+                    place(foodType)
+                    Send(["ch", ["NBoT: Go easy on me(turr)"]]);
+                    instacount = 0;
+                    antiClown = 1;
+                }
+                if (playerInfo[5] == 15) { //9 || playerInfo[5] == 10 || playerInfo[5] == 11 || playerInfo[5] == 12 || playerInfo[5] == 13 || playerInfo[5] == 14 || playerInfo[5] == 15){
+                    hat(6);
+                    place(foodType)
+                    place(foodType)
+                    Send(["ch", ["NBoT: Go easy on me(sec)"]]);
+                    antiClown = 1;
+                }
+                instacountTT++
+            }
+        }
+    }
+    else {
+        instacountTT = 0
+        instacount = 0
+    }
+}, 0)
+setInterval(() => {
+if((primTimeid[nearId] - Date.now()) == -250){
+     Send(["ch", ["NBoT: bobS"]]);
+    hat(11);
+    acc(21);
+    console.log("autoSpike working!");
+}
+},0)
+setInterval(() => {
+    if (Math.round(Math.sqrt(Math.pow(myPlayer.y - TrapY, 2) + Math.pow(myPlayer.x - TrapX, 2))) > 100 && plase == 0) {
+        plase = 1;
+    }
+    if (TrapDirOn == 1) {
+        setTimeout(() => {
+            if (TrapDirOn == 1) {
+                if (Math.round(Math.sqrt(Math.pow(myPlayer.y - TrapY, 2) + Math.pow(myPlayer.x - TrapX, 2))) > 100) {
+                    if (TrapDirOn == 1) {
+                        console.log("TrapY :" + TrapY + " TrapY :" + TrapY);
+                        hat(hatttt);
+                        SpamLKM.stop();
+                        TrapDirOn = 0;
+                        Send(["ch", ["NBoT: Error ;("]]);
+                        if (secondary == 10) {
+                            Send(["5", [primary, true]]);
+                            setTimeout(() => {
+                                Send(["5", [primary, true]]);
+                                setTimeout(() => {
+                                    plase = 1;
+                                    Send(["5", [primary, true]]);
+                                }, 50)
+                            }, 50)
+                        }
+                    }
+                }
+            }
+        }, 100);
+    }
+}, 0)
+if (isEnemyNear == true) {
+    if (primary == 4 && secondary == 15 && timer >= timerStop && primTimer >= 500) { //  && prim == 1 && sec == 0){
+        Send(["ch", ["Try NBoT autoinsta!"]]);
+        makeInsta()
+    }
+}
+let traPS;
+function makeInsta() {
+    if(TrapDirOn == 0) {
+    //    TrapDirOn = 0;
+    //    traPS == 1;
+    //}
+    accessoryy = myPlayer.accessory;
+    pesseD = 1;
+    makeingInsta = 1;
+    sec = 0;
+    prim = 1;
+    Send(["5", [primary, true]]);
+    SpamLKM.stop();
+    if (primTimer >= 300 && timer >= 1600) {
+        if (primTimer == 0) {
+            primTimer == 370;
+        }
+        else if (primTimer < 100) {
+            primTimer = primTimer + 300;
+        }
+        if (kakaka == 1) {
+            kakaka = 0;
+            Inviz = false;
+        }
+        autoaim = true;
+            rePrim.start();
+        Send(["5", [primary, true]]);
+        hat(7);
+        acc(18);
+        Send(["7", [1]]);
+        setTimeout(() => {
+            hat(6);
+            if (timer >= timerStop || (secondary != 15 || secondary != 13)) {
+                hat(53);
+                timer = 0;
+                    rePrim.stop();
+                    reSec.start();
+                Send(["5", [secondary, true]]);
+            }
+            acc(21);
+        }, instaSpeed - 140);
+        setTimeout(() => {
+                rePrim.stop();
+                reSec.start();
+            Send(["5", [secondary, true]]);
+            prim = 0;
+            sec = 1;
+            pesseD = 0;
+            makeingInsta = 0;
+            Send(["7", [1]]);
+            hat(hatttt);
+            acc(accessoryy);
+            autoaim = null;
+            if (Inviz == false) {
+                kakaka = 1;
+                Inviz = true;
+            }
+        }, instaSpeed);
+        setTimeout(() => {
+                rePrim.stop();
+                reSec.start();
+            Send(["5", [secondary, true]]);
+        }, instaSpeed + 50);
+        setTimeout(() => {
+            Send(["5", [secondary, true]]);
+        }, instaSpeed + 75);
+        setTimeout(() => {
+            Send(["5", [secondary, true]]);
+            rePrim.stop();
+            reSec.stop();
+            if(traPS == 1){
+                traPS = 0;
+                if(TrapDir != "nothink"){
+                TrapDirOn = 1;
+                }
+            }
+            if (gagagsadasd == 1) {
+                TrapDirOn = 1;
+                makeingInsta = 0;
+                gagagsadasd = 0;
+            }
+        }, instaSpeed + 100);
+    }
+    else {
+        if(TrapDirOn == 0) {
+            makeingInsta = 0;
+            prim = 1;
+            sec = 0;
+        Send(["5", [primary, true]]);
+        rePrim.start();
+        setTimeout(() => {
+            sec = 1;
+            prim = 0;
+            rePrim.stop();
+            reSec.start();
+            Send(["5", [secondary, true]]);
+            setTimeout(() => {
+                rePrim.stop();
+                reSec.stop();
+                makeingInsta = 0;
+                //if (primTimer == 0) {
+                //    primTimer == 370;
+                //}
+                //else if (primTimer < 100) {
+                //    primTimer = primTimer + 300;
+                //}
+                //if (kakaka == 1) {
+                //    kakaka = 0;
+                //    Inviz = false;
+                //}
+                //autoaim = true;
+                //    rePrim.start();
+                //Send(["5", [primary, true]]);
+                //hat(7);
+                //acc(18);
+                //Send(["7", [1]]);
+                //setTimeout(() => {
+                //    hat(6);
+                //    if (timer >= timerStop || (secondary != 15 || secondary != 13)) {
+                //        hat(53);
+                //        timer = 0;
+                //            rePrim.stop();
+                //            reSec.start();
+                //        Send(["5", [secondary, true]]);
+                //    }
+                //    acc(21);
+                //}, instaSpeed - 140);
+                //setTimeout(() => {
+                //        rePrim.stop();
+                //        reSec.start();
+                //    Send(["5", [secondary, true]]);
+                //    prim = 0;
+                //    sec = 1;
+                //    pesseD = 0;
+                //    makeingInsta = 0;
+                //    Send(["7", [1]]);
+                //    hat(hatttt);
+                //    acc(accessoryy);
+                //    autoaim = null;
+                //    if (Inviz == false) {
+                //        kakaka = 1;
+                //        Inviz = true;
+                //    }
+                //}, instaSpeed);
+                //setTimeout(() => {
+                //        rePrim.stop();
+                //        reSec.start();
+                //    Send(["5", [secondary, true]]);
+                //}, instaSpeed + 50);
+                //setTimeout(() => {
+                //    Send(["5", [secondary, true]]);
+                //}, instaSpeed + 75);
+                //setTimeout(() => {
+                //    Send(["5", [secondary, true]]);
+                //    rePrim.stop();
+                //    reSec.stop();
+                //    if (gagagsadasd == 1) {
+                //        TrapDirOn = 1;
+                //        makeingInsta = 0;
+                //        gagagsadasd = 0;
+                //    }
+                //}, instaSpeed + 100);
+            },1550 + 100)
+        },300 + 100)
+    }
+        makeingInsta = 0;
+    }
+}
+}
+let angeww = 100;
+let NTeorX = 0;
+let NTeorY = 0;
+let MousePress = 0;
+let blockMPress = 2;
+let angel;
+let ofangel = 1;
+let offangel = angel;
+let ban;
+setInterval(() => {
+    window.onblur = function() {
+        Send(["ch", ["NBoT:NiisanIsAFK~(Im bored;-;)"]]);
+    }
+    if (Wpr == 1 && Apr == 1) {
+        angel = -2.36
+    }
+    else if (Wpr == 1 && Dpr == 1) {
+        angel = -0.79
+    }
+    else if (Spr == 1 && Apr == 1) {
+        angel = 2.36
+    }
+    else if (Spr == 1 && Dpr == 1) {
+        angel = 0.79
+    }
+    else if (Wpr == 1) {
+        angel = -1.57;
+    }
+    else if (Apr == 1) {
+        angel = 3.14;
+    }
+    else if (Spr == 1) {
+        angel = 1.57;
+    }
+    else if (Dpr == 1) {
+        angel = 0;
+    }
+    if (KEK != cordys && WASDpr == 1) {
+        if (pesseD == 0) {
+            if (plase == 1) {
+                if (automill == 1) {
+                    //if (Math.round(Math.sqrt(Math.pow(myPlayer.y - NTeorY, 2) + Math.pow(myPlayer.x - NTeorX, 2))) > 100) {
+                    //    NTeorY = myPlayer.y;
+                    //    NTeorX = myPlayer.x;
+                    //    millOlPlased = 4;
+                    //}
+                    if (millOlPlased < 4) {
+                        if (primary != 7) {
+                            Send(['5', ['length', !0]]);
+                        }
+                        else {
+                            Send(["5", [primary, true]]);
+                        }
+                        if (millplased < 10) {
+                            if (Math.round(Math.sqrt(Math.pow(myPlayer.y - automillY, 2) + Math.pow(myPlayer.x - automillX, 2))) > 100) {
+                                //setTimeout(() => {
+                                //    if (Math.round(Math.sqrt(Math.pow(myPlayer.y - NTeorY, 2) + Math.pow(myPlayer.x - NTeorX, 2))) > 50) {
+                                //    millOlPlased = 4;
+                                //    }
+                                //},100)
+                                    ban = primary;
+                                if(ofangel == 0){
+                                    angeww = 100;
+                                millplased = millplased + 1;
+                                place(millType, angel + (freezeRad(90) + toRad(3)));
+                                place(millType, angel - freezeRad(180));
+                                place(millType, angel - (freezeRad(90) + toRad(3)));
+                                place(millType, angel - toRad(180) - toRad(1));
+                                place(millType, angel - toRad(180) + toRad(1));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(1.5));
+                                place(millType, angel - toRad(180) + toRad(1.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(2));
+                                place(millType, angel - toRad(180) + toRad(2));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(2.5));
+                                place(millType, angel - toRad(180) + toRad(2.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(3));
+                                place(millType, angel - toRad(180) + toRad(3));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(3.5));
+                                place(millType, angel - toRad(180) + toRad(3.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(4));
+                                place(millType, angel - toRad(180) + toRad(4));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(4.5));
+                                place(millType, angel - toRad(180) + toRad(4.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(5));
+                                place(millType, angel - toRad(180) + toRad(5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(5.5));
+                                place(millType, angel - toRad(180) + toRad(5.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(6));
+                                place(millType, angel - toRad(180) + toRad(6));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(6.5));
+                                place(millType, angel - toRad(180) + toRad(6.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(7));
+                                place(millType, angel - toRad(180) + toRad(7));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(7.5));
+                                place(millType, angel - toRad(180) + toRad(7.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(8));
+                                place(millType, angel - toRad(180) + toRad(8));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(8.5));
+                                place(millType, angel - toRad(180) + toRad(8.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(9));
+                                place(millType, angel - toRad(180) + toRad(9));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(9.5));
+                                place(millType, angel - toRad(180) + toRad(9.5));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(10));
+                                place(millType, angel - toRad(180) + toRad(10));
+                                Send(["5", [primary, true]]);
+                                place(millType, angel - toRad(180) - toRad(10.5));
+                                place(millType, angel - toRad(180) + toRad(10.5));
+                                Send(["5", [primary, true]]);
+                                } else {
+                                    angeww = 0;
+                                    for (let i = 90; i < 270; i = i + 5) {
+                                    place(millType, angel + toRad(i));
+                                        Send(["5", [primary, true]]);
+                                    }
+                                    //setTimeout(() => {
+                                    //place(millType, angel + (freezeRad(45) + toRad(180)));
+                                    //place(millType, angel - (freezeRad(45) + toRad(180)));
+                                    //Send(["5", [ban, true]]);
+                                    //}, 50)
+                                    //millplased = millplased + 1;
+                                    //place(millType, angel + (freezeRad(45) + toRad(180)));
+                                    //place(millType, angel - (freezeRad(45) + toRad(180)));
+                                }
+                                //setTimeout(() => {
+                                //	place(millType, offangel + freezeRad(90));
+                                //	place(millType, offangel - freezeRad(180))
+                                //	place(millType, offangel - toRad(180) + toRad(4));
+                                //	place(millType, offangel - toRad(180) + toRad(3));
+                                //	place(millType, offangel - toRad(180) + toRad(2));
+                                //	place(millType, offangel - toRad(180) + toRad(1));
+                                //	place(millType, offangel - toRad(180) - toRad(1));
+                                //	place(millType, offangel - toRad(180) - toRad(2));
+                                //	place(millType, offangel - toRad(180) - toRad(3));
+                                //	place(millType, offangel - toRad(180) - toRad(4));
+                                //	place(millType, offangel - freezeRad(90));
+                                //if(myPlayer.weapon != "length"){
+                                //       Send(['5', ['length', !0]]);
+                                //    }
+                                //}, 25)
+                                setTimeout(() => {
+                                    Send(["5", [ban, true]]);
+                                }, 50)
+                            }
+                        }
+                        else {
+                            setTimeout(() => {
+                                millplased = 0;
+                            }, 350)
+                        }
+                    }
+                    else {
+                        setTimeout(() => {
+                            millOlPlased = 0;
+                        }, 200)
+                    }
+                }
+                else if (automill == 2) {
+                    setTimeout(() => {
+                        place(spikeType, angel - toRad(180));
+                    }, 50)
+                    place(spikeType, angel + toRad(90));
+                    place(spikeType, angel - toRad(90));
+                }
+                else if (automill == 3) {
+                    place(boostType, angel - freezeRad(180));
+                    place(boostType, angel + freezeRad(90));
+                    place(boostType, angel - freezeRad(90));
+                    place(boostType, angel);
+                }
+                else if (automill == 4) {
+                    place(millType, angel - freezeRad(180));
+                }
+            }
+        }
+        //if (KEK != cordys && WASDpr == 1) {
+        //	plase = 0;
+        //	plaseCord = Math.atan2(myPlayer.y - cordY, myPlayer.x - cordX);
+        //	cordX = myPlayer.x;
+        //	cordY = myPlayer.y;
+        //	if (pesseD == 0) {
+        //		if (automill == 1) {
+        //			if (millplased < 10) {
+        //				//remillplase.start();
+        //				//r1emill.start();
+        //				millplased = millplased + 1;
+        //				place(millType, offangel - freezeRad(180));
+        //				place(millType, offangel - freezeRad(180));
+        //				place(millType, offangel - freezeRad(180));
+        //				place(millType, offangel + freezeRad(90));
+        //				place(millType, offangel - freezeRad(180));
+        //				place(millType, offangel - freezeRad(90));
+        //				//place(millType, plaseCord + toRad(135));
+        //				place(millType, offangel - freezeRad(180));
+        //				//place(millType, plaseCord - toRad(135));
+        //				Send(["5", [myPlayer.weapon, true]]);
+        //				Send(["5", [myPlayer.weapon, true]]);
+        //				Send(["5", [myPlayer.weapon, true]]);
+        //				Send(["5", [myPlayer.weapon, true]]);
+        //				setTimeout(() => {
+        //					place(millType, offangel - freezeRad(180));
+        //					place(millType, offangel - freezeRad(180));
+        //					place(millType, offangel - freezeRad(180));
+        //					place(millType, offangel - freezeRad(90));
+        //					place(millType, offangel - freezeRad(180));
+        //					place(millType, offangel + freezeRad(90));
+        //					place(millType, offangel - freezeRad(180));
+        //					//
+        //					place(millType, offangel - toRad(90));
+        //					place(millType, offangel - toRad(180));
+        //					place(millType, offangel + toRad(90));
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					//remillplase.stop();
+        //					//r1emill.stop()
+        //				}, 50)
+        //				setTimeout(() => {
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //					Send(["5", [myPlayer.weapon, true]]);
+        //                    Send(["ch", ["Dir: " + (offangel + toRad(180)).toFixed(2)]]);
+        //				}, 60)
+        //			} else {
+        //				setTimeout(() => {
+        //					millplased = 0;
+        //				}, 350)
+        //			}
+        //		} else if (automill == 2) {
+        //			setTimeout(() => {
+        //				place(spikeType, plaseCord - toRad(180));
+        //			}, 50)
+        //			place(spikeType, plaseCord + toRad(90));
+        //			place(spikeType, plaseCord - toRad(90));
+        //		} else if (automill == 3) {
+        //			place(boostType, plaseCord - freezeRad(180));
+        //			place(boostType, plaseCord + freezeRad(90));
+        //			place(boostType, plaseCord - freezeRad(90));
+        //			place(boostType, plaseCord);
+        //		} else if (automill == 4) {
+        //			place(millType, plaseCord - freezeRad(180));
+        //		}
+        //	}
+        //	setTimeout(() => {
+        //		plase = 1;
+        //	}, 0);
+        //}
+        //	}
+    }
+}, 0);
+setInterval(() => {
+    cordys = myPlayer.x + myPlayer.y;
+}, 100)
+setInterval(() => {
+    if (canTrashHit == 1 && canHit == 1) {
+        canHit = 0;
+        hat(7);
+        setTimeout(() => {
+            if (hyita == 1) {
+                hat(53);
+            }
+        }, 76)
+        setTimeout(() => {
+            acc(accessoryyy);
+            hat(hatttt);
+        }, 76 + 76)
+        setTimeout(() => {
+            canHit = 1;
+            acc(accessoryyy);
+            hat(hatttt);
+        }, 300)
+    }
+}, 0)
+let clownbull = 0;
+setInterval(() => {
+    if (antiClown == 1 && primTimer >= 500 && isEnemyNear == false) {
+        //setTimeout(() => {
+            Send(["ch", ["NBoT:Try AntiClown ~50%"]]);
+            antiClown = 0;
+            clownbull = 1;
+            Qpr = 0;
+            hat(7);
+            healer.stop();
+            setTimeout(() => {
+                if (QSaver == 1) {
+                    healer.start()
+                }
+                if (TrapDirOn != 1) {
+                    hat(hatttt);
+                }
+                else {
+                    hat(40);
+                }
+                clownbull = 0;
+          }, 1000)
+        //}, 100)
+    }
+}, 100)
+
+function acc(id) {
+    Send(["13c", [0, 0, 1]]);
+    Send(["13c", [1, id, 1]]);
+    Send(["13c", [0, id, 1]]);
+}
+
+function hat(id) {
+    Send(["13c", [1, id, 0]]);
+    Send(["13c", [0, id, 0]]);
+}
+
+function place(id, angle = Math.atan2(mouseY - height / 2, mouseX - width / 2)) {
+    if (automill != 1) {
+        if (sec == 1 && prim == 0) {
+            Send(["5", [secondary, true]]);
+        }
+        else if (sec == 0 && prim == 1) {
+            Send(["5", [primary, true]]);
+        }
+        else {
+            Send(["5", [myPlayer.weapon, true]]);
+        }
+    }
+    Send(['5', [id, null]]);
+    Send(["c", [1, angle]]);
+    Send(["c", [0, angle]]);
+    if (automill != 1) {
+        if (sec == 1 && prim == 0) {
+            Send(["5", [secondary, true]]);
+        }
+        else if (sec == 0 && prim == 1) {
+            Send(["5", [primary, true]]);
+        }
+        else {
+            Send(["5", [myPlayer.weapon, true]]);
+        }
+    } else {
+        Send(["5", [ban, true]]);
+}
+}
+
+function invplace(id, angle = Math.atan2(mouseY - height / 2, mouseX - width / 2)) {
+    if (automill != 1) {
+        if (sec == 1 && prim == 0) {
+            Send(["5", [secondary, true]]);
+        }
+        else if (sec == 0 && prim == 1) {
+            Send(["5", [primary, true]]);
+        }
+        else {
+            Send(["5", [myPlayer.weapon, true]]);
+        }
+    }
+    Send(['5', [id, null]]);
+    Send(["c", [1, Number.MAX_VALUE]]);
+    Send(["c", [0, Number.MAX_VALUE]]);
+    if (automill != 1) {
+        if (sec == 1 && prim == 0) {
+            Send(["5", [secondary, true]]);
+        }
+        else if (sec == 0 && prim == 1) {
+            Send(["5", [primary, true]]);
+        }
+        else {
+            Send(["5", [myPlayer.weapon, true]]);
+        }
+    } else {
+        Send(["5", [ban, true]]);
+}
+}
+
+function boostSpike() {
+    if (boostDir == null) {
+        boostDir = nearestEnemyAngle;
+    }
+    place(spikeType, nearestEnemyAngle + toRad(90));
+    place(spikeType, boostDir - toRad(90));
+    place(boostType, boostDir);
+    Send(["33", [boostDir]]);
+}
+
+function boostSpike1() {
+    if (gag1 == null) {
+        gag1 = Math.atan2(mouseY - height / 2, mouseX - width / 2);
+    }
+    //place(millType, gag1 + toRad(90));
+    //place(millType, gag1 - toRad(90));
+    invplace(turretType,"0908070879");
+    place(boostType, gag1 + toRad(36000000000000) - toRad(10));
+    Send(["33", [gag1]]);
+}
+
+function boostSpike2() {
+    if (gag1 == null) {
+        gag1 = Math.atan2(mouseY - height / 2, mouseX - width / 2);
+    }
+    place(millType, gag1 + toRad(90));
+    place(millType, gag1 - toRad(90));
+    place(millType, gag1 - toRad(180));
+    Send(["33", [gag1]]);
+}
+var repeat = function(action, interval) {
+    let _isKeyDown = false;
+    let _intervalId = undefined;
+    return {
+        start() {
+            if (document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = true;
+                if (_intervalId === undefined) {
+                    _intervalId = setInterval(() => {
+                        action();
+                        if (!_isKeyDown) {
+                            clearInterval(_intervalId);
+                            _intervalId = undefined;
+                            console.log("claered");
+                        }
+                    }, interval);
+                }
+            }
+        },
+        stop() {
+            if (document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = false;
+            }
+        }
+    };
+}
+var repeater = function(key, action, interval) {
+    let _isKeyDown = false;
+    let _intervalId = undefined;
+    return {
+        start(keycode) {
+            if (keycode == key && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = true;
+                if (_intervalId === undefined) {
+                    _intervalId = setInterval(() => {
+                        action();
+                        if (!_isKeyDown) {
+                            clearInterval(_intervalId);
+                            _intervalId = undefined;
+                            console.log("claered");
+                        }
+                    }, interval);
+                }
+            }
+        },
+        stop(keycode) {
+            if (keycode == key && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = false;
+            }
+        }
+    };
+}
+const SpamLKM = repeat(() => {
+    Send(["c", [1, '']]);
+    Send(["c", [0, '']]);
+}, 0);
+const reSec = repeat(() => {
+    Send(["5", [secondary, true]])
+}, 0);
+const rePrim = repeat(() => {
+    Send(["5", [primary, true]])
+}, 0);
+const remillplase = repeat(() => {
+    place(millType, offangel + freezeRad(90)); // + toRad(1)
+    place(millType, offangel - freezeRad(90));
+    Send(["5", [myPlayer.weapon, true]]);
+    Send(["5", [myPlayer.weapon, true]]);
+    //place(millType, plaseCord + toRad(45+45+52));
+    //place(millType, plaseCord - toRad(45+45+52));
+}, 0);
+const r1emill = repeat(() => {
+    place(millType, offangel - freezeRad(180))
+    place(millType, offangel - freezeRad(180))
+    place(millType, offangel - toRad(180) + toRad(4));
+    place(millType, offangel - toRad(180) + toRad(3));
+    place(millType, offangel - toRad(180) + toRad(2));
+    place(millType, offangel - toRad(180) + toRad(1));
+    place(millType, offangel - toRad(180) - toRad(1));
+    place(millType, offangel - toRad(180) - toRad(2));
+    place(millType, offangel - toRad(180) - toRad(3));
+    place(millType, offangel - toRad(180) - toRad(4));
+    Send(["5", [myPlayer.weapon, true]]);
+    Send(["5", [myPlayer.weapon, true]]);
+}, 0);
+const healer = repeater(81, () => {
+    place(foodType)
+}, 0);
+const boostPlacer = repeater(16, () => {
+    place(boostType)
+}, 0);
+const spikePlacer = repeater(69, () => {
+    place(spikeType)
+}, 0);
+const millPlacer = repeater(78, () => {
+    place(millType)
+}, 0);
+const millPlacer1 = repeater(39, () => {
+    place(millType)
+}, 0);
+const turretPlacer = repeater(17, () => {
+    place(turretType)
+}, 0);
+const spawnpadPlacer = repeater(109, () => {
+    place(spawnpadType)
+}, 0);
+const boostSpiker = repeater(71, boostSpike, 0);
+const boostSpiker1 = repeater(72, boostSpike1, 0);
+const boostSpiker2 = repeater(192, boostSpike2, 0);
+let tankOn = 0;
+document.addEventListener('mousedown', (e) => {
+    if (e.which == 1 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        MousePress = 1;
+        if (TrapDirOn == 0 && makeingInsta == 0) {
+            if (secondary != 10 && prim == 1) {
+                if (tankOn == 0) {
+                    hat(7);
+                }
+                else {
+                    hat(40)
+                }
+            }
+        }
+        if (blockMPress == 1) {
+            Send(["7", [1]]);
+        }
+        //        Send(["2", [Number.MAX_VALUE - 10]]);
+        pesseD = 1;
+        if (prim == 1) {
+            if (myPlayer.accessory == 11) {
+                acc(0);
+            }
+            //            Send(["2", [Number.MAX_VALUE - 10]]);
+            Send(["5", [primary, true]]);
+        }
+        else {
+            Send(["5", [secondary, true]]);
+        }
+            if (secondary == 10 && primary == 7 && TrapDirOn == 1) {
+                Send(["5", [secondary, true]]);
+            }
+    }
+});
+document.addEventListener('mouseup', (e) => {
+    if (e.which == 1 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        MousePress = 0;
+        if (blockMPress == 0) {
+            blockMPress = 2;
+        }
+        //SpamLKM.stop();
+        hat(hatttt);
+        acc(accessoryyy);
+        pesseD = 0;
+
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode == 65 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Apr = 1;
+    }
+    if (e.keyCode == 87 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Wpr = 1;
+    }
+    if (e.keyCode == 83 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Spr = 1;
+    }
+    if (e.keyCode == 68 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Dpr = 1;
+    }
+    if (e.keyCode == 81 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Qpr = 1;
+        QSaver
+    }
+    if (e.keyCode == 38 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (automill == 4) {
+            Send(["ch", ["NBoT: APlace-Off"]]);
+            automill = 0;
+        }
+        else if (automill == 0) {
+            Send(["ch", ["NBoT: APlace-Mill"]]);
+            automill = 1;
+        }
+        else if (automill == 1) {
+            Send(["ch", ["NBoT: APlace-Spike"]]);
+            automill = 2;
+        }
+        else if (automill == 2) {
+            Send(["ch", ["NBoT: APlace-Trap"]]);
+            automill = 3;
+        }
+        else if (automill == 3) {
+            Send(["ch", ["NBoT: FPlace-Mill"]]);
+            automill = 4;
+        }
+    }
+    if (e.keyCode == 40 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        ofangel = (ofangel + 1) % 2;
+        if (ofangel == 0) {
+            Send(["ch", ["NBoT: 3-APlace"]]);
+        }
+        else {
+            Send(["ch", ["NBoT: 2-APlace"]]);
+        }
+    }
+    if (e.keyCode == 49 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (sec == 1) {
+            sec = 0;
+        }
+        hat(hatttt);
+        prim = 1;
+        sec = 0;
+        pesseD = 1;
+    }
+    if (e.keyCode == 50 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (prim == 1) {
+            prim = 0;
+        }
+        hat(20);
+        sec = 1;
+        pesseD = 1;
+    }
+    spikePlacer.start(e.keyCode);
+    healer.start(e.keyCode);
+    spawnpadPlacer.start(e.keyCode);
+    boostPlacer.start(e.keyCode);
+    boostSpiker.start(e.keyCode);
+    boostSpiker1.start(e.keyCode);
+    millPlacer.start(e.keyCode);
+    millPlacer1.start(e.keyCode);
+    turretPlacer.start(e.keyCode);
+    boostSpiker2.start(e.keyCode);
+    if (e.keyCode == 98 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        BuBul = (BuBul + 1) % 2;
+        if (BuBul == 1) {
+            Send(['ch', ['Uchiha Dance On']]);
+            hat(11);
+            acc(21);
+            hatttt = 11;
+            accessoryyy = 21;
+        }
+        else {
+            Send(['ch', ['Uchiha Dance Off']]);
+        }
+    }
+    if (e.keyCode == 97 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        kakaka = (kakaka + 1) % 3;
+        if (kakaka == 1) {
+            Send(['ch', ['NBoT: Glitch arrow On']]);
+        }
+        else if (kakaka == 2) {
+            Send(['ch', ['NBoT: 360 On']]);
+        }
+        else {
+            Send(['ch', ['NBoT: Off']]);
+        }
+    }
+    if (e.keyCode == 190 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i = 0; i < 2500; i++) {
+            place(millType, plaseCord - 180)
+        }
+    }
+    if (e.keyCode == 80 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i = 0; i < 4; i++) {
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(wallType, angle)
+        }
+    }
+    if (e.keyCode == 82 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i = 0; i < 4; i++) {
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(boostType, angle)
+        }
+    }
+    if (e.keyCode == 48 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i = 0; i < 4; i++) {
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(spikeType, angle)
+        }
+    }
+    if (e.keyCode == 78 && document.activeElement.id.toLowerCase() !== "chatbox") {
+        Send(["test", [null, n]]);
+        hat("__proto__");
+        place("__proto__", "__proto__");
+        invplace(turretType,"0908070879");
+        place(spikeType, "__proto__");
+        Send(["33", ["__proto__"]]);
+    }
+    if (e.keyCode == 191 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        ChatToggle = (ChatToggle + 1) % 2;
+    }
+    if (e.keyCode == 66 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        place(turretType, myPlayer.dir);
+        place(turretType, myPlayer.dir + toRad(75));
+        place(turretType, myPlayer.dir - toRad(75));
+    }
+    if (e.keyCode == 70 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        tankOn = 1;
+        if (secondary != 10) {
+            prim = 1;
+            sec = 0;
+            Send(["5", [primary, true]]);
+        }
+        else {
+            prim = 0
+            sec = 1
+            Send(["5", [secondary, true]]);
+        }
+        BuyHat(40, "Tank", 11) // id of hat, name of hat, id of acc, cost of hat
+    }
+    if (e.keyCode == 75 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        BuyHat(7, "Bull", 18)
+    }
+    if (e.keyCode == 86 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        BuyHat(31, "Flipper", 11)
+    }
+    if (e.keyCode == 89 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        BuyHat(22, "Amp", 11)
+    }
+    if (e.keyCode == 84 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        BuyHat(53, "Turret", 18)
+    }
+    if (e.keyCode == 77 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        BuyHat(12, "Boost", 11)
+    }
+    if (e.keyCode == 32 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (save == 1) {
+            hatttt = myPlayer.hat;
+            accessoryyy = myPlayer.accessory;
+            if (ChatToggle == 1) {
+                Send(["ch", ["NBoT: Kit saved!"]]);
+            }
+            save = 0
+        }
+        else {
+            if (tankOn == 1) {
+                tankOn = 0;
+            }
+            if (secondary == 10) {
+                prim = 1;
+                sec = 0;
+                Send(["5", [primary, true]]);
+            }
+            hat(hatttt);
+            acc(accessoryyy);
+        }
+    }
+    if (e.keyCode == 671 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        reload = (reload + 1) % 2;
+        if (reload == 1) {
+            Send(["ch", ["NBoT: Reload On!"]]);
+        }
+        else {
+            Send(["ch", ["NBoT: Reload Off!"]]);
+        }
+    }
+    if (e.keyCode == 113 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        save = (save + 1) % 2;
+        if (save == 1) {
+            Send(["ch", ["NBoT: Save you kit!"]]);
+        }
+        else {
+            Send(["ch", ["NBoT: Error xD!"]]);
+        }
+    }
+    if (e.keyCode == 106 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        healToggle = (healToggle + 1) % 2;
+        if (healToggle == 0) {
+            if (hatToggle == 0) {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Heal OFF!"]]);
+                }
+                document.title = "Heal: OFF | Hat: OFF"
+            }
+            else {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Heal OFF!"]]);
+                }
+                document.title = "Heal: OFF | Hat: ON"
+            }
+        }
+        else {
+            if (hatToggle == 0) {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Heal ON!"]]);
+                }
+                document.title = "Heal: ON | Hat: OFF"
+            }
+            else {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Heal ON!"]]);
+                }
+                document.title = "Heal: ON | Hat: ON"
+            }
+        }
+    }
+    if (e.keyCode == 90 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        //if (isEnemyNear == true) {
+        //	hat(7);
+        //	acc(18);
+        //} else {
+        makeInsta()
+        //}
+    }
+    if (e.keyCode == 76 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        weaponn = myPlayer.weapon
+        hatt = myPlayer.hat;
+        autoaim = true;
+        Send(["5", [secondary, true]]);
+        hat(53);
+        Send(["c", [1]]);
+        setTimeout(() => {
+            Send(["6", [12]]);
+        }, 100);
+        setTimeout(() => {
+            Send(["6", [15]]);
+        }, 200);
+        setTimeout(() => {
+            Send(["c", [0]]);
+            hat(hatt);
+            Send(["5", [weaponn, true]]);
+            autoaim = false;
+        }, 300);
+    }
+    if (e.keyCode == 111 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        hatToggle = (hatToggle + 1) % 2;
+        if (healToggle == 0) {
+            if (hatToggle == 0) {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Hat OFF!"]]);
+                }
+                document.title = "Heal: OFF | Hat: OFF"
+            }
+            else {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Hat ON!"]]);
+                }
+                document.title = "Heal: OFF | Hat: ON"
+            }
+        }
+        else {
+            if (hatToggle == 0) {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Hat OFF!"]]);
+                }
+                document.title = "Heal: ON | Hat: OFF"
+            }
+            else {
+                if (ChatToggle == 1) {
+                    Send(["ch", ["NBoT: Hat ON!"]]);
+                }
+                document.title = "Heal: ON | Hat: ON"
+            }
+        }
+    }
+})
+//
+//document.getElementById('storeDisplay1').top;
+//document.getElementById('storeDisplay1').left;
+document.getElementById('enterGame').innerHTML = 'NBoT: Yes boss?';
+document.getElementById('nameInput').placeholder = "xXx228killer2008xXx";
+document.getElementById('chatBox').placeholder = "Let's send him - Go Away ~ NOOB ~ !";
+document.getElementById("killCounter").style.color = "Red";
+document.getElementById("allianceButton").style.color = "black";
+document.getElementById("chatButton").style.color = "black";
+document.getElementById("storeButton").style.color = "black";
+document.getElementById('errorNotification').remove();
+document.getElementById("gameName").style.color = "black";
+document.getElementById("gameName").innerHTML = "!CRASH ALL!";
+document.getElementById("loadingText").style.color = "black";
+document.getElementById('loadingText').innerHTML = 'Crash the computer if nothing loads.';
+document.addEventListener('keyup', (e) => {
+    spikePlacer.stop(e.keyCode);
+    healer.stop(e.keyCode);
+    spawnpadPlacer.stop(e.keyCode);
+    boostPlacer.stop(e.keyCode);
+    boostSpiker.stop(e.keyCode);
+    boostSpiker1.stop(e.keyCode);
+    millPlacer.stop(e.keyCode);
+    millPlacer1.stop(e.keyCode);
+    turretPlacer.stop(e.keyCode);
+    boostSpiker2.stop(e.keyCode);
+    if (e.keyCode == 87 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Wpr = 0;
+        //angel = -1.57;
+    }
+    if (e.keyCode == 65 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Apr = 0;
+        //angel = 3.14;
+    }
+    if (e.keyCode == 83 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Spr = 0;
+        //angel = 1.57;
+    }
+    if (e.keyCode == 68 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Dpr = 0;
+        //angel = 0;
+    }
+    if (e.keyCode == 49 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        pesseD = 0;
+    }
+    if (e.keyCode == 50 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        pesseD = 0;
+    }
+    if (e.keyCode == 81 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        Qpr = 0;
+        QSaver = 0;
+    }
+    if (e.keyCode == 90 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        //	if (isEnemyNear == true) {
+        //		makeInsta()
+        //	}
+    }
+    if (e.keyCode == 71 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        setTimeout(() => {
+            Send(["33", [null]]);
+            boostDir = null;
+        }, 10);
+    }
+    if (e.keyCode == 72 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        setTimeout(() => {
+            Send(["33", [null]]);
+            gag1 = null;
+        }, 10);
+    }
+    if (e.keyCode == 192 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        setTimeout(() => {
+            Send(["33", [null]]);
+            gag1 = null;
+        }, 10);
+    }
+})
+
+function BuyHat(hatid, hName, accid) {
+    if (myPlayer.hat == hatid && myPlayer.accessory == accid) {
+        Send(["ch", ["NBoT: " + hName + " already equip!"]]);
+        hat(hatid);
+        acc(accid);
+    }
+    else {
+        hat(hatid);
+        acc(accid);
+        Send(["ch", ["NBoT: " + hName + " equip!"]]);
+    }
+}
+
+function Hyita(text, otvet, content) {
+    let Text = (text);
+    let Text1 = text.test(content);
+    if (Text1) {
+        Send(["ch", [otvet]]);
+    }
+}
+
+function isElementVisible(e) {
+    return (e.offsetParent !== null);
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function toRad(angle) {
+    return angle * 0.01745329251;
+}
+
+function dist(a, b) {
+    return Math.sqrt(Math.pow((b.y - a[2]), 2) + Math.pow((b.x - a[1]), 2));
+}
+
+function update() {
+    for (let i = 0; i < 9; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            primary = i;
+        }
+    }
+    for (let i = 9; i < 16; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            secondary = i;
+        }
+    }
+    for (let i = 16; i < 19; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            foodType = i - 16;
+        }
+    }
+    for (let i = 19; i < 22; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            wallType = i - 16;
+        }
+    }
+    for (let i = 22; i < 26; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            spikeType = i - 16;
+        }
+    }
+    for (let i = 26; i < 29; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            millType = i - 16;
+        }
+    }
+    for (let i = 29; i < 31; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            mineType = i - 16;
+        }
+    }
+    for (let i = 31; i < 33; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            boostType = i - 16;
+        }
+    }
+    for (let i = 33; i < 39; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString())) && i != 36) {
+            turretType = i - 16;
+        }
+    }
+    spawnpadType = 36;
+}
+//setInterval(() => {
+//	if (secondary == 15) {
+//		if (timer == 1600) {
+//			timer = 1700;
+//			Send(['ch', ['Reload end!']]);
+//			Send(["5", [primary, true]]);
+//			prim = 1;
+//			sec = 0;
+//			if (isEnemyNear == true) {
+//				setTimeout(() => {
+//					makeInsta()
+//					Send(['ch', ['GaG_(212)']]);
+//				}, 499)
+//			} else {
+//				hat(hatttt);
+//			}
+//			setTimeout(() => {
+//				Send(['ch', ['GaG_(121)']]);
+//			}, 500)
+//		}
+//	} else if (secondary == 15) {
+//		if (timer == 400) {
+//			Send(['ch', ['Reload end!']]);
+//			Send(["5", [primary, true]]);
+//			prim = 1;
+//			sec = 0;
+//			if (isEnemyNear == true) {
+//				setTimeout(() => {
+//					makeInsta()
+//					Send(['ch', ['GaG_(212)']]);
+//				}, 499)
+//			} else {
+//				hat(hatttt);
+//			}
+//			setTimeout(() => {
+//				Send(['ch', ['GaG_(121)']]);
+//			}, 500)
+//		}
+//	}
+//}, 0)
+if (secondary == 15) {
+    timerStop = 1600;
+}
+if (secondary == 13) {
+    timerStop = 400;
+}
+if (secondary != 13 || secondary != 15) {
+    timerStop = 1000000000000000000;
+}
+$("#partyButton, #joinPartyButton").wrapAll('<div class="partyWrap"></div>');
+$("#linksContainer2 > a:nth-child(1)").replaceWith('<a href="./docs/versions.txt" target="_blank" class="menuLink">NB MoD - demo v0.9</a>');
+$("#partyButton").replaceWith('<span>Empty </span><i class="material-icons" style="font-size:30px;vertical-align:middle"></i>');
+//$( "#promoImg" ).replaceWith( '<img id="bannerImg" src="https://cdn.discordapp.com/attachments/450024393628844032/690255076052566016/unknown.png" style="width:300px;cursor:pointer">' );
+//$(" #mainMenu ").css("background", "url('https://cdn.discordapp.com/attachments/450024393628844032/786718134513041448/Screenshot_6.png')");
+(function() {
+    var css = ["  #featuredYoutube > a.ytLink, ", "  a {", "    color: #ff0000 !important;", "    font-size: 20px;", "    margin-top: 0px;", "    transition: 0.5s;", "  }", "", "  a:hover {", "    color: #cc0000 !important;", "  }", "", "  #youtuberOf, ", "  #linksContainer2, ", "  .partyWrap {", "    background: rgba(0,0,0,0.6);", "    border: 3px solid rgba(0,0,0,0.9);", "    border-radius: 10px;", "    padding: 10px;", "    font-size: 20px;", "    position: absolute;", "    color: #fff;", "  }", "", "  .partyWrap {", "    min-height: 80px;", "    min-width: 160px;", "    top: 10px;", "    right: 10px;", "  }", "", "  #youtuberOf {", "    top: 10px;", "    left: 10px;", "  }", "", "  #followText {", "    min-height: 200px;", "    bottom: 10px;", "    left: 10px;", "  }", "", "  #linksContainer2 {", "    bottom: 10px;", "    right: 10px;", "    color: transparent;", "  }", "", "  .menuCard {", "    background: rgba(0,0,0,0.6);", "    border-radius: 10px;", "    border: 10px solid rgba(0,0,0,0.9);", "    box-shadow: none;", "    overflow:auto;", "  }", "", "  ::-webkit-scrollbar {", "    width: 10px;", "    border-right: 2px solid #ff0000;", "  }", "", "  ::-webkit-scrollbar-thumb {", "    border: 2px solid #ff0000;", "  }", "", "  ::-webkit-scrollbar-thumb:hover {", "    background: #ff0000;", "  }", "", "  ::-webkit-scrollbar-thumb:active {", "    background: black;", "    border: 2px solid #ff0000;", "  }", "", "  .menuHeader {", "    font-size: 24px;", "    color: #eeeeee;", "    margin-bottom: 3px;", "    border-bottom: 3px solid #eee;", "  }", "", "  .menuHeader:first-child {", "    margin-bottom: 30px;", "  }", "", "  .menuText {", "    font-size: 18px;", "    color: #ccc;", "    margin-bottom: 10px;", "  }", "", "  .ytLink {", "    color: #ff0000;", "    font-size: 24px;", "    text-decoration: none;", "    transition: 0.5s;", "  }", "", "  .menuButton {", "    color: #fff;", "    background-color: transparent;", "    border: 5px solid #ff0000;", "    position: relative;", "    display: inline-flex;", "    padding: 0px 70px;", "    font-family: denk one;", "    transition: color .5s;", "    overflow: hidden;", "    width: 100%;", "    justify-content: center;", "  }", "", "  .menuButton:hover {", "    color: #FFFFFF !important;", "    border: 5px solid #ff0000;", "    cursor: pointer;", "    background-color: transparent;", "  }", "", "  .menuButton:before {", "    content: \'\';", "    position: absolute;", "    top: 0;", "    left: 0;", "    width: 130%; ", "    height: 10000%;", "    background: #ff0000;", "    border-right: 20px solid #feb69c;", "    z-index: -1;", "    transform-origin:0 0 ;", "    transform:translateX(-112%) skewX(45deg);", "    transition: transform .5s;", "  }", "", "  .menuButton:hover:before {", "    color: #FFFFFF !important;", "    transform: translateX(-20%) skewX(45deg);", "  }", "", "  .menuCard span {", "    margin: 10px;", "  }", "", "  #promoHolderImg > img {", "    width: 300px;", "    height: 94px;", "  }", "", "  #guideCard {", "    max-height: 282px;", "  }", "", "  .skinColorItem {", "    transition: 1s;", "    border: 3px solid #000;", "  }", "", "  select {", "    background: #cc0000;", "    border-radius: 5px;", "    border: 3px solid #ff0000;", "    margin-bottom: 10px;", "    color: #fff;", "    transition: 0.5s;", "  }", "", "  select:hover {", "    background: #ff0000;", "    border: 3px solid #cc0000;", "  }", "", "  #pre-content-container {", "    display: none!important;", "  }", "", "  .uiElement, ", "  .resourceDisplay, ", "  .actionBarItem {", "    background-color: rgba(0,0,0,0.6) !important;", "    border: 3px solid rgba(0,0,0,0.9);", "    border-radius: 50px !important;", "    color: #ff0000;", "    transition: 0.5s;", "  }", "", "  .uiElement:hover, ", "  .resourceDisplay:hover, ", "  .actionBarItem:hover {", "    background-color: rgba(0,0,0,0.5) !important;", "    border: 3px solid rgba(0,0,0,0.9);", "    border-radius: 50px !important;", "    color: #ff0000;", "  }", "", "  #topInfoHolder, #itemInfoHolder, #mapDisplay, #chatBox  { ", "    background-color: rgba(0,0,0,0.6) !important;", "    border: 3px solid rgba(0,0,0,0.9);", "    border-radius: 10px !important;", "    color: #ff0000;", "  }", "", "  #itemInfoHolder { ", "    -webkit-text-stroke: transparent;", "  }", "", "  .material-icons { ", "    color: #ff0000;", "    font-size: 31px;", "    -webkit-text-stroke: 1.5px #fff;", "  }", "", "  #altServer > a > i {", "    font-size: 30px !important;", "    -webkit-text-stroke: transparent !important;", "  }", "", "  #ageText { ", "    font-size: 40px !important;", "    color: #ff0000;", "    -webkit-text-stroke: 1.5px #fff;", "    margin-bottom: 30px;", "  }", "", "  #ageBarBody {", "    background-color: #ff0000;", "    border: 3px solid #fff", "  }", "", "  #ageBar {", "    background-color: rgba(0,0,0,0.6) !important;", "    border: 3px solid rgba(0,0,0,0.9);", "    height: 10px;", "    padding-bottom: 10px;", "    margin-bottom: 20px;", "  }", "", "  .actionBarItem {", "    width: 65px;", "    height: 65px;", "    background-position: center; ", "    background-size: 55px 55px;", "  }", "", "  #aBox {", "    color: #ff0000!important;", "    transition: 0.5s;", "  }", "", "  #chatBox::placeholder {", "    color: #ff0000!important;", "  }", "", "  #chatBox:hover {", "    background: rgba(0,0,0,0.5)!important;", "  }", "", "  #chatBox:hover::placeholder {", "    color: #fc9f9f!important;", "  }", "", "  #leaderboard, .leaderboardItem[style*=\"color: rgb(255, 255, 255);\"] {", "    color: #ff0000!important;", "  }", "", "  .ytLink:hover {", "    color: #cc0000;", "  }", "", "  #nameInput {", "    background: #fff;", "    border: 5px solid #ff0000;", "    transition: 0.5s;", "  }", "", "  #nameInput::placeholder {", "    color: #ff0000;", "    transition: 0.5s;", "  }", "", "  #nameInput:hover {", "    background: #ff0000;", "    color: #fff;", "  }", "", "  #nameInput:hover::placeholder {", "    background: #ff0000;", "    color: #fff;", "  }", "", "  #linksContainer2 {", "    max-height: 500px;", "    width: 250px;", "  }", "", "  #linksContainer2 > * {", "    display:table-cell;", "    vertical-align:middle;", "    text-align: center;", "    width:700px;", "  }", "  ", "  .storeTab, ", "  #storeHolder, ", "  #allianceHolder, ", "  #allianceInput, ", "  .allianceButtonM {", "    background: rgba(0,0,0,0.6);", "    border: 3px solid rgba(0,0,0,0.9);", "  }", "", "  .storeItem, ", "  .storeTab, ", "  .allianceButtonM, ", "  #allianceInput::placeholder, ", "  .allianceItem {", "    color: #ff0000 !important;", "  }", "", "  .storeItem, ", "  .storeTab, ", "  .allianceButtonM, ", "  #allianceInput::placeholder, ", "  .allianceItem, ", "  .joinAlBtn {", "    color: #ff0000 !important;", "  }", "", "  .storeItem:hover, ", "  .storeTab:hover, ", "  .allianceButtonM:hover,", "  .allianceItem:hover, ", "  .joinAlBtn:hover {", "    color: #fc9f9f !important;", "  }", "", "  #allianceInput, ", "  #killCounter {", "    color: #ff0000;", "  }", "  ", "  #allianceInput:hover {", "    background: rgba(0,0,0,0.5);", "    color: #fc9f9f;", "  }", "", "  #allianceInput:hover::placeholder{", "    color: #fc9f9f;", "  }", "", "  #linksContainer2 > *:first-child {", "    border-bottom: 3px solid #ff0000;", "  }", "", "  #moddedMenu {", "    position: absolute;", "    top: 3.25%;", "    left: 0px;", "    width: 3%;", "    height: 45.0%;", "    background: rgba(0,0,0,0.6);", "    border: 3px solid rgba(0,0,0,0.9);", "    border-top-right-radius: 30px;", "    border-bottom-right-radius: 30px;", "    transition: 1s;", "    z-index: 999;", "  }", "", "  #moddedMenu:hover {", "    width: 20%;", "  }", "", "  #youtuberOf {", "    bottom: 10px;", "    top: auto;", "  }", "", "  .titleMM {", "    color: #ff0000;", "    border-bottom: 3px solid #ff0000;", "    font-size: 32px;", "    transform: rotate(90deg);", "    white-space: nowrap;", "    margin-top: 250%;", "    transition: 1s;", "  }", "", "  #moddedMenu:hover > .titleMM {", "    transform: rotate(0deg) translate(0,-1580%)", "  }", "", "  .switch {", "    margin-top: 5px;", "    margin-left: 10px;", "    position: absolute;", "    width: 60px;", "    height: 34px;", "    transition: opacity 1s;", "    opacity: 0;", "  }", "", "  .text {", "    bottom: 76%;", "    position: absolute;", "    color: #eee;", "    font-size: 20px;", "    left: 0%;", "    display: none;", "    transition: 1s;", "  }", "", "  .text > b { ", "    font-size: 20px;", "    color: #ff0000;", "  }", "", "  b:hover { ", "    color: #fc9f9f;", "  }", "", "  .one > .text {", "    top: 5.5%;", "  }", "", "  .two > .text {", "    top: 10.7%;", "  }", "", "  .three > .text {", "    top: 37.5%;", "  }", "", "  .four > .text {", "    top: 47.5%;", "  }", "", "  .five > .text {", "    top: 57.5%;", "  }", "", "  .six > .text {", "    top: 67.5%;", "  }", "", "  .seven > .text {", "    top: 77.5%;", "  }", "", "  .eight > .text {", "    top: 87.5%;", "  }", "", "  #moddedMenu:hover .switch {", "    opacity: 1;", "  }", "", "  #moddedMenu:hover .text {", "    display: block;", "  }", "", "  .one > .switch {", "    top: 15%;", "  }", "", "  .two > .switch {", "    top: 25%;", "  }", "", "  .three > .switch {", "    top: 35%;", "  }", "", "  .four > .switch {", "    top: 45%;", "  }", "", "  .five > .switch {", "    top: 55%;", "  }", "", "  .six > .switch {", "    top: 65%;", "  }", "", "  .seven > .switch {", "    top: 75%;", "  }", "", "  .eight > .switch {", "    top: 85%;", "  }", "", "  .switch input {", "    display:none;", "  }", "", "  .slider {", "    position: absolute;", "    cursor: pointer;", "    top: 0;", "    left: 0;", "    right: 0;", "    bottom: 0;", "    background-color: #888;", "    -webkit-transition: .4s;", "    transition: .4s;", "  }", "", "  .slider:before {", "    position: absolute;", "    content: \"\";", "    height: 26px;", "    width: 26px;", "    left: 4px;", "    bottom: 4px;", "    background-color: white;", "    -webkit-transition: .4s;", "    transition: .4s;", "  }", "", "  input:checked + .slider {", "    background-color: #ff0000;", "  }", "  ", "  input:focus + .slider {", "    box-shadow: 0 0 1px #ff0000;", "  }", "", "  input:checked + .slider:before {", "    -webkit-transform: translateX(26px);", "    -ms-transform: translateX(26px);", "    transform: translateX(26px);", "  }", "", "  .slider.round {", "    border-radius: 34px;", "  }", "", "  .slider.round:before {", "    border-radius: 50%;", "  }"].join("\n");
+    if (typeof GM_addStyle != "undefined") {
+        GM_addStyle(css);
+    }
+    else if (typeof PRO_addStyle != "undefined") {
+        PRO_addStyle(css);
+    }
+    else if (typeof addStyle != "undefined") {
+        addStyle(css);
+    }
+    else {
+        var node = document.createElement("style");
+        node.type = "text/css";
+        node.appendChild(document.createTextNode(css));
+        var heads = document.getElementsByTagName("head");
+        if (heads.length > 0) {
+            heads[0].appendChild(node);
+        }
+        else {
+            // no head yet, stick it whereever
+            document.documentElement.appendChild(node);
+        }
+    }
+    //                 if (item == "ch" && data[1] != myPlayer.id) {
+    //       console.log(data);
+    ////Hyita('FRUIT', 'NBoT: fruit nob ;-;', data[2]);
+    //if(data[2] == FRUIT) {
+    //   Send(["ch", ["NBoT: fruit nob ;-;"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/Samurai: fastest/i)) {
+    //    console.log("work");
+    //   Send(["ch", ["Samurai - slowest"]]);
+    //   }
+    //if(data[2] == (/Get poison noob/i)) {
+    //   Send(["ch", ["Ok ;-;"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/noob/i)) {
+    //   Send(["ch", ["NBoT: No u!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/nub/i)) {
+    //   Send(["ch", ["NBoT: No u!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/hi/i)) {
+    //   Send(["ch", ["NBoT: hai!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/nab/i)) {
+    //   Send(["ch", ["NBoT: No u!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/nob/i)) {
+    //   Send(["ch", ["NBoT: No u!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/ez/i)) {
+    //   Send(["ch", ["NBoT: Oof, kid"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/ezz/i)) {
+    //   Send(["ch", ["NBoT: Oof, kid!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/project surge/i)) {
+    //   Send(["ch", ["Sub to NoT BoT!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/RELOADED!!!/i)) {
+    //   Send(["ch", ["OK!!! :0"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/Reloaded MemeLord!/i)) {
+    //   Send(["ch", ["Not Reloaded NoTBoT;("]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/reload/i)) {
+    //   Send(["ch", ["Already reloaded or no?"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/why trap?/i)) {
+    //   Send(["ch", ["All for u sweet~"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/Anti trap/i)) {
+    //   Send(["ch", ["All for u sweet~"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/i am super pro/i)) {
+    //   Send(["ch", ["U super noob;-;"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/SamMOD/i)) {
+    //   Send(["ch", ["~=NB Mod~discord=fakU#00000"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/heal/i)) {
+    //   Send(["ch", ["Heal ur self or I kill u!"]]);
+    //    console.log("work");
+    //   }
+    //if(data[2] == (/;::;*/i)) {
+    //   Send(["ch", ["*;-;*"]]);
+    //    console.log("work");
+    //   }
+    //    }
+})();
+//}
+//setTimeout(startinglol, 10000)

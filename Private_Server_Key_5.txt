@@ -1,0 +1,53 @@
+// ==UserScript==
+// @name         Private Server Key #5
+// @version      [Key #5]
+// @match        ://moomoo.io/*
+// @match        ://sandbox.moomoo.io/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    let ws = window.WebSocket;
+    class Sanctuary extends ws {
+        constructor(){
+            super('wss://blossom-plump-rainstorm.glitch.me/moomoo'); // better? u happy now? its set to moomoo dipshit
+        }
+    }
+    window.WebSocket = Sanctuary;
+
+    // prevent server full messages
+    Object.defineProperty(window, 'vultr', {
+        value: {
+            "scheme": "mmprod",
+            "servers": [{
+                "ip": "",
+                "scheme": "mm_prod",
+                "region": "vultr:39",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": true
+                }]
+            }]
+        },
+        writable: false
+    });
+
+    let open = XMLHttpRequest.prototype.open;
+
+    XMLHttpRequest.prototype.open = function(method) {
+        let url = arguments[1];
+
+        if (url) {
+            if (url.endsWith("/serverData")) {
+                return open.apply(this, ['GET', '']);
+            }
+        }
+
+        return open.apply(this, arguments);
+    };
+
+    if (window.location.href.includes("?server=") && !window.location.href.includes("?server=39:4:0")) {
+        window.location = "//" + window.location.host;
+    }
+})();

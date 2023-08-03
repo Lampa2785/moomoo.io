@@ -1,0 +1,97 @@
+// ==UserScript==
+// @name     -macro
+// @match        *://sandbox.moomoo.io/*
+// @match        *://moomoo.io/*
+// @require http://code.jquery.com/jquery-3.3.1.min.js
+// @require      https://cdn.jsdelivr.net/npm/msgpack-lite@0.1.26/dist/msgpack.min.js
+// ==/UserScript==
+let mouseX, mouseY, width, height;
+var primary, secondary, foodType, wallType, spikeType, millType, mineType, boostType, turretType, spawnpadType;
+var ws;
+var msgpack5 = msgpack;
+let myPlayer = {id: null,x: null,y: null,dir: null,object: null,weapon: null,clan: null,isLeader: null,hat: null,accessory: null,isSkull: null};
+let healToggle = 1;
+document.msgpack = msgpack;
+function n(){this.buffer = new Uint8Array([0]);this.buffer.__proto__ = new Uint8Array;this.type = 0;}
+WebSocket.prototype.oldSend = WebSocket.prototype.send;
+WebSocket.prototype.send = function(data) {if (!ws) {document.ws = this;ws = this;socketFound(this);}this.oldSend(data);};
+function socketFound(socket) {socket.addEventListener('message', function(data) {handleMessage(data);});}
+function handleMessage(m){
+let temp = msgpack5.decode(new Uint8Array(m.data));
+let data;
+if(temp.length > 1) {
+data = [temp[0], ...temp[1]];
+if (data[1] instanceof Array){
+data = data;
+}
+} else {
+data = temp;
+}
+let item = data[0];
+if(!data) {return};
+if(item === "io-init") {
+let cvs = document.getElementById("gameCanvas");
+width = cvs.clientWidth;
+height = cvs.clientHeight;
+$(window).resize(function() {
+width = cvs.clientWidth;
+height = cvs.clientHeight;
+})
+cvs.addEventListener("mousemove", e => {
+mouseX = e.clientX;
+mouseY = e.clientY;
+});
+}
+if (item == "1" && myPlayer.id == null){
+myPlayer.id = data[1];
+}
+if (item == "33") {
+for(let i = 0; i < data[1].length / 13; i++) {
+let playerInfo = data[1].slice(13*i, 13*i+13);
+if(playerInfo[0] == myPlayer.id) {
+myPlayer.x = playerInfo[1];
+myPlayer.y = playerInfo[2];
+myPlayer.dir = playerInfo[3];
+myPlayer.object = playerInfo[4];
+myPlayer.weapon = playerInfo[5];
+myPlayer.clan = playerInfo[7];
+myPlayer.isLeader = playerInfo[8];
+myPlayer.hat = playerInfo[9];
+myPlayer.accessory = playerInfo[10];
+myPlayer.isSkull = playerInfo[11];
+}
+}
+}
+if(item == "h" && data[1] == myPlayer.id) {
+if(data[2] < 86 && data[2] > 0 && healToggle == 1) {
+setTimeout( () => {
+place(foodType, null);
+doNewSend(["c", [1]]);
+doNewSend(["c", [0]]);
+doNewSend(["5", [myPlayer.weapon, true]]);
+}, 250);
+}
+}
+iTems();
+}
+function doNewSend(sender){
+ws.send(new Uint8Array(Array.from(msgpack5.encode(sender))));
+}
+function place(id) {
+doNewSend(["5", [id, null]]);
+}
+var repeater = function (e, t, n) {let o = !1,r = void 0;return {start(i) {i == e && "chatbox" !== document.activeElement.id.toLowerCase() && (o = !0, void 0 === r && (r = setInterval(() => {t();o || (clearInterval(r), r = void 0)}, n)))},stop(t) {t == e && "chatbox" !== document.activeElement.id.toLowerCase() && (o = !1)}}};
+const healer = repeater(81, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(foodType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);}, 50);}, 50);
+const boostPlacer = repeater(70, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(boostType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);},50)},0)
+const spikePlacer = repeater(86, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(spikeType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);}, 50);}, 0);
+const millPlacer = repeater(78, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(millType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);}, 50);}, 0);
+const wall = repeater(71, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(wallType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);}, 50);}, 0);
+const spawn = repeater(66, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(millType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);}, 50);}, 0);
+const turretPlacer = repeater(72, () => {doNewSend(["5", [myPlayer.weapon, true]]);place(turretType);doNewSend(["c", [1]]);doNewSend(["c", [0]]);setTimeout( () => {doNewSend(["c", [1]]);doNewSend(["c", [0]]);doNewSend(["5", [myPlayer.weapon, true]]);}, 50);}, 0);
+document.addEventListener('keydown', (e)=>{spikePlacer.start(e.keyCode);healer.start(e.keyCode);wall.start(e.keyCode);spawn.start(e.keyCode);boostPlacer.start(e.keyCode);millPlacer.start(e.keyCode);turretPlacer.start(e.keyCode);
+if(e.keyCode == 80 && document.activeElement.id.toLowerCase() !== 'newchatbox') {healToggle = (healToggle + 1) % 2;}
+})
+document.addEventListener('keyup', (e)=>{spikePlacer.stop(e.keyCode);boostPlacer.stop(e.keyCode);millPlacer.stop(e.keyCode);turretPlacer.stop(e.keyCode);healer.stop(e.keyCode);wall.stop(e.keyCode);spawn.stop(e.keyCode);})
+function isElementVisible(e) {return (e.offsetParent !== null);}
+function dist(a, b){return Math.sqrt( Math.pow((b.y-a[2]), 2) + Math.pow((b.x-a[1]), 2) );}
+function iTems() {for(let e = 0; e < 9; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (primary = e);for(let e = 9; e < 16; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (secondary = e);for(let e = 16; e < 19; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (foodType = e - 16);for(let e = 19; e < 22; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (wallType = e - 16);for(let e = 22; e < 26; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (spikeType = e - 16);for(let e = 26; e < 29; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (millType = e - 16);for(let e = 29; e < 31; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (mineType = e - 16);for(let e = 31; e < 33; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (boostType = e - 16);for(let e = 36; e < 37; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && (spawnpadType = e - 16);for(let e = 33; e < 39; e++) isElementVisible(document.getElementById("actionBarItem" + e.toString())) && 36 != e && (turretType = e - 16)}
